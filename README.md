@@ -1,34 +1,17 @@
-# Your Project's Title...
-Your project's description...
+# Trail & Town · In Simple Terms with Satish
+
+Fictional AEM Edge Delivery Services teaching campaign. USD prices are illustrative. No checkout, payment, or stock checks.
+
+- Authoring: https://da.live/#/satishkchoudhary/ist-eds-retail
+- Preview: https://main--ist-eds-retail--satishkchoudhary.aem.page/
+- Content source: Document Authoring; preview content separately from code.
+- Block contract: image | details with h3 | displayed price | link.
+- Optional offer: previous price in del, current price in strong, in the same price cell.
+- Original course SVG illustrations are in assets/.
+
+The project started from adobe/aem-boilerplate. Its loader is unmodified. Run npm ci then npm run lint before code changes are delivered.
 
 ## Environments
-- Preview: https://main--ist-eds-retail--satishkchoudhary.aem.page/
-- Live: https://main--ist-eds-retail--satishkchoudhary.aem.live/
 
-## Documentation
-
-Before using the aem-boilerplate, we recommand you to go through the documentation on https://www.aem.live/docs/ and more specifically:
-1. [Developer Tutorial](https://www.aem.live/developer/tutorial)
-2. [The Anatomy of a Project](https://www.aem.live/developer/anatomy-of-a-project)
-3. [Web Performance](https://www.aem.live/developer/keeping-it-100)
-4. [Markup, Sections, Blocks, and Auto Blocking](https://www.aem.live/developer/markup-sections-blocks)
-
-## Installation
-
-```sh
-npm i
-```
-
-## Linting
-
-```sh
-npm run lint
-```
-
-## Local development
-
-1. Create a new repository based on the `aem-boilerplate` template
-1. Add the [AEM Code Sync GitHub App](https://github.com/apps/aem-code-sync) to the repository
-1. Install the [AEM CLI](https://github.com/adobe/helix-cli): `npm install -g @adobe/aem-cli`
-1. Start AEM Proxy: `aem up` (opens your browser at `http://localhost:3000`)
-1. Open the `ist-eds-retail` directory in your favorite IDE and start coding :)
+- Production endpoint (content publishing not performed): https://main--ist-eds-retail--satishkchoudhary.aem.live/
+- Official development guide: https://www.aem.live/developer/tutorial
