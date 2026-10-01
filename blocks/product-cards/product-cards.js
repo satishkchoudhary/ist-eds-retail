@@ -4,11 +4,15 @@ export default function decorate(block) {
   const errors = [];
   [...block.children].forEach((row, index) => {
     const cells = [...row.children];
+    const previous = cells[2]?.querySelector('del, em');
+    const current = cells[2]?.querySelector('strong');
+    const incompleteOffer = (previous || current)
+      && (!previous?.textContent.trim() || !current?.textContent.trim());
     if (cells.length !== 4 || !cells[0].querySelector('img')
       || !cells[1].querySelector('h3') || !cells[2].textContent.trim()
       || !cells[3].querySelector('a[href]')
-      || (cells[2].querySelector('del, em') && !cells[2].querySelector('strong')?.textContent.trim())) {
-      const message = `Product row ${index + 1}: expected image, heading/details, price, and link; a sale price also needs a current price.`;
+      || incompleteOffer) {
+      const message = `Product row ${index + 1}: expected image, heading/details, price, and link; a sale price needs non-empty previous and current prices.`;
       // eslint-disable-next-line no-console
       console.warn(message);
       row.classList.add('product-cards-invalid');
@@ -21,8 +25,6 @@ export default function decorate(block) {
     details.className = 'product-cards-details';
     const amount = document.createElement('p');
     amount.className = 'product-cards-price';
-    const previous = price.querySelector('del, em');
-    const current = price.querySelector('strong');
     if (previous && current) {
       const oldLabel = document.createElement('span');
       oldLabel.className = 'product-cards-price-label';
