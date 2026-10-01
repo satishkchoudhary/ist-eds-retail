@@ -1,6 +1,6 @@
 .product-cards > ul {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(min(100%,240px),1fr));
+  grid-template-columns: 1fr;
   gap: 20px;
   list-style: none;
   padding: 0;
@@ -142,4 +142,16 @@
 .product-cards a:any-link {
   color: #244b3b;
   font: 700 14px/1.5 Arial, sans-serif;
+}
+
+@media (width >= 600px) {
+  .product-cards > ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (width >= 1100px) {
+  .product-cards > ul {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }
