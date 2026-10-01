@@ -172,3 +172,9 @@ footer {
  
 }
 }
+
+/* Keep the photographic treatment consistent during cached block rollout. */
+main .product-cards .product-cards-media img {
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
