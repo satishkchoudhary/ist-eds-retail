@@ -31,6 +31,7 @@ main .section {
 
 main .section > div {
   max-width: 1240px;
+  padding: 0;
 
 }
 
