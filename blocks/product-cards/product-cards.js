@@ -39,6 +39,8 @@ export default function decorate(block) {
       amount.textContent = price.textContent.trim();
     }
     destination.className = 'product-cards-link';
+    const link = destination.querySelector('a[href]');
+    link.setAttribute('aria-label', `${link.textContent.trim()}: ${details.querySelector('h3').textContent.trim()}`);
     item.append(media, details, amount, destination);
     list.append(item);
     row.remove();

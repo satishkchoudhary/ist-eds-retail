@@ -1,0 +1,39 @@
+.field-notes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.field-notes .field-notes-guide {
+  padding: 32px;
+  background: #faf9f5;
+  border-top: 3px solid #68816a;
+}
+
+.field-notes h3 {
+  margin: 0 0 20px;
+  font: 400 28px/1.25 Georgia, serif;
+  letter-spacing: -0.5px;
+}
+
+.field-notes p {
+  margin: 0 0 16px;
+  color: #4d5d54;
+  font: 16px/1.7 Arial, sans-serif;
+}
+
+.field-notes p:last-child {
+  margin-bottom: 0;
+}
+
+@media (width <= 600px) {
+  .field-notes {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .field-notes .field-notes-guide {
+    padding: 24px;
+  }
+}
