@@ -1,73 +1,174 @@
+main a:focus-visible {
+  outline: 3px solid #b86632;
+  outline-offset: 5px;
+ 
+}
+
+:root {
+  --body-font-family: arial, helvetica, sans-serif;
+  --heading-font-family: georgia, serif;
+  --link-color: #244b3b;
+  --link-hover-color: #a54a2e;
+  --background-color: #faf9f5;
+  --text-color: #1c3028;
+}
 
 body {
-   background: #f5f3e9;
-   color: #203b30;
-
+  background: #faf9f5;
+ 
 }
-
 
 main h1, main h2, main h3 {
-   font-family: Georgia, serif;
-
+  font-family: Georgia, serif;
+ 
 }
-
-
-main h1 {
-   font-size: clamp(38px, 6vw, 72px);
-   line-height: 1.05;
-
-}
-
-
-main a {
-   color: #245b45;
-
-}
-
 
 main .section {
-   padding-block: 48px;
-
+  padding: 76px 24px;
+ 
 }
 
+main .section > div {
+  max-width: 1240px;
+ 
+}
 
 main .section:first-child {
-   background: #e8eddf;
-
+  position: relative;
+  isolation: isolate;
+  min-height: 660px;
+  display: flex;
+  align-items: center;
+  padding: 80px 6vw;
+  color: white;
+  background: #223e33;
 }
 
-
-main .section:first-child img {
-   width: 100%;
-   max-height: 420px;
-   object-fit: cover;
-   border-radius: 8px;
-
+main .section:first-child > div {
+  width: 100%;
+ 
 }
 
+main .section:first-child p:has(picture) {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  z-index: -2;
+}
+
+main .section:first-child picture, main .section:first-child img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center 45%;
+}
+
+main .section:first-child::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(90deg, rgb(9 27 21 / 80%), rgb(9 27 21 / 35%) 60%, rgb(9 27 21 / 10%));
+}
 
 main .section:first-child h1 {
-   max-width: 800px;
-
+  max-width: 720px;
+  font-size: clamp(48px, 6.8vw, 92px);
+  line-height: 1.02;
+  letter-spacing: -3px;
+  margin: 24px 0;
 }
 
-
-main .section:first-child p {
-   max-width: 800px;
-
+main .section:first-child p:not(:has(picture)) {
+  max-width: 510px;
+ 
 }
 
-
-main .product-cards-wrapper {
-   max-width: 1200px;
-
+main .section:first-child p:first-child {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
 }
 
-
-main a:focus-visible {
-   outline: 3px solid #a44713;
-   outline-offset: 5px;
-
+main .section:first-child a:any-link {
+  display: inline-block;
+  color: #17372a;
+  background: #fff9e9;
+  padding: 15px 24px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 2px;
+  margin-top: 16px;
 }
 
+main .section:nth-child(2) h2 {
+  font-size: clamp(34px, 4vw, 48px);
+ 
+}
 
+main .section:nth-child(3) {
+  background: #e9ede3;
+ 
+}
+
+main .section:nth-child(3) h3 {
+  margin-top: 40px;
+ 
+}
+
+main .section:nth-child(3) li {
+  margin-bottom: 8px;
+ 
+}
+
+main .section:last-child {
+  background: #193b2e;
+  color: #f5f4e9;
+ 
+}
+
+main .section:last-child a:any-link {
+  color: #f5f4e9;
+ 
+}
+
+header .nav-tools {
+  font-size: 12px;
+  letter-spacing: 1px;
+ 
+}
+
+footer {
+  background: #e9ede3;
+ 
+}
+
+@media (width <= 600px) {
+  main .section {
+  padding: 44px 20px;
+ 
+}
+
+  main .section:first-child {
+  min-height: 610px;
+  padding: 50px 24px;
+ 
+}
+
+  main .section:first-child h1 {
+  letter-spacing: -1.5px;
+ 
+}
+
+  main .section:first-child img {
+  object-position: 65% center;
+ 
+}
+
+  header .nav-tools {
+  display: none;
+ 
+}
+}
